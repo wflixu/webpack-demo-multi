@@ -1,0 +1,27 @@
+{
+  "name": "webpack-demo-multi",
+  "version": "1.0.0",
+  "description": "webpack 4.x  multientry  config",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wflixu/webpack-demo-multi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wflixu/webpack-demo-multi/issues"
+  },
+  "homepage": "https://github.com/wflixu/webpack-demo-multi#readme",
+  "devDependencies": {
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.10"
+  }
+}
