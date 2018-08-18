@@ -1,10 +1,13 @@
 {
   "name": "webpack-demo-multi",
+  "sideEffects": [
+    "./src/some-side-effectful-file.js"
+  ],
   "version": "1.0.0",
   "description": "webpack 4.x  multientry  config",
   "private": true,
   "scripts": {
-    "test": "webpack --config webpack.config.js",
+    "build": "webpack --config webpack.config.js --mode production",
     "dev": "webpack-dev-server --open --mode development "
   },
   "repository": {
