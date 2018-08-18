@@ -8,60 +8,60 @@ const path = require('path');
 // const UglifyjsWebpackPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
+  mode: 'development',
   // JavaScript 执行入口文件
   entry: {
-    main: './src/index.js',
+    main: './src/index.js'
     // about: './src/about.js'
   },
   output: {
-    // 把所有依赖的模块合并输出到一个 bundle.js 文件
     filename: '[name].js',
     // 把输出文件都放到 dist 目录下
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, './dist')
   },
-  // devServer: {
-  //   contentBase: path.resolve(__dirname, 'dist'), // 配置开发服务运行时的文件根目录
-  //   host: 'localhost', // 开发服务器监听的主机地址
-  //   compress: true, // 开发服务器是否启动gzip等压缩
-  //   port: 8080 // 开发服务器监听的端口
-  // },
-  // module: {
-  //   rules: [
-  //     {
-  //       // 用正则去匹配要用该 loader 转换的 CSS 文件
-  //       test: /\.css$/,
-  //       use: ExtractTextPlugin.extract({
-  //         use: ['style-loader', 'css-loader', 'postcss-loader'],
-  //         include: path.join(__dirname, './src'),
-  //         exclude: /node_modules/
-  //       })
-  //     },
-  //     {
-  //       test: /\.(png|jpg|gif|svg|bmp|eot|woff|woff2|ttf)$/,
-  //       loader: {
-  //         loader: 'url-loader',
-  //         options: {
-  //           limit: 5 * 1024, // 图片大小 > limit 使用file-loader, 反之使用url-loader
-  //           outputPath: 'images/' // 指定打包后的图片位置
-  //         }
-  //       }
-  //     },
-  //     {
-  //       // 暴露模块
-  //       test: require.resolve('jquery'), // 注意 这里是require的resolve 方法
-  //       use: {
-  //         loader: 'expose-loader',
-  //         options: '$'
-  //       }
-  //     },
-  //     {
-  //       test: /\.(html|html)$/,
-  //       use: 'html-withimg-loader',
-  //       include: path.join(__dirname, './src'),
-  //       exclude: /node_modules/
-  //     }
-  //   ]
-  // },
+
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      },
+      // {
+      //   // 用正则去匹配要用该 loader 转换的 CSS 文件
+      //   test: /\.css$/,
+      //   use: ExtractTextPlugin.extract({
+      //     use: ['style-loader', 'css-loader', 'postcss-loader'],
+      //     include: path.join(__dirname, './src'),
+      //     exclude: /node_modules/
+      //   })
+      // },
+      {
+        test: /\.(png|jpg|gif|svg|bmp|eot|woff|woff2|ttf)$/,
+        use: ['file-loader']
+      },
+      {
+        test: /\.xml$/,
+        use: ['xml-loader']
+      }
+      // {
+      //   test: /\.(png|jpg|gif|svg|bmp|eot|woff|woff2|ttf)$/,
+      //   loader: {
+      //     loader: 'url-loader',
+      //     options: {
+      //       limit: 5 * 1024, // 图片大小 > limit 使用file-loader, 反之使用url-loader
+      //       outputPath: '' // 指定打包后的图片位置
+      //     }
+      //   }
+      // }
+
+      // {
+      //   test: /\.(html|html)$/,
+      //   use: 'html-withimg-loader',
+      //   include: path.join(__dirname, './src'),
+      //   exclude: /node_modules/
+      // }
+    ]
+  }
   // devtool: 'eval-source-map',
   // plugins: [
   //   new ExtractTextPlugin({
