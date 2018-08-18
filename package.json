@@ -4,7 +4,7 @@
   "description": "webpack 4.x  multientry  config",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "webpack --config webpack.config.js",
     "dev": "webpack-dev-server --open --mode development "
   },
   "repository": {

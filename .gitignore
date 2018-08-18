@@ -1,7 +1,15 @@
-
-.idea/
+.DS_Store
 node_modules/
-dist
-*.log
-/docs/_book/
-uploader-server/uploads
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.exe
+*.cpp
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
