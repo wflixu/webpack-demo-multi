@@ -68,6 +68,17 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
+                test:/\.(png|jpg|gif)$/,
+                use:{
+                    loader:'url-loader',
+                    options:{
+                        limit:200*1024,
+                        outputPath:'/img/',
+                        publicPath:'http://wflixu.github.io'
+                    }
+                }
+            },
+            {
                 test: /\.(le|c)ss$/,
                 use: [{
                     loader: 'style-loader',
@@ -105,6 +116,7 @@ module.exports = {
     ],
     output: {
         filename: '[name].bundle.[hash:8].js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        publicPath:'http://wflixu.github.io'
     }
 }
