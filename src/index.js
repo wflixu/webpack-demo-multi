@@ -1,13 +1,2 @@
-let str = require('./a.js');
-console.log(str);
+console.log('home js file');
 
-require('./index.css');
-require('./less.less');
-
-
-const fn = ()=>{
-    console.log('bable');
-    
-}
-
-fn();

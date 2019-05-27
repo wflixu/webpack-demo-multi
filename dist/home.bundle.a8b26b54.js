@@ -77,7 +77,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "http://wflixu.github.io";
 /******/
 /******/
 /******/ 	// Load entry module and return exports
@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("throw new Error(\"Module build failed (from ./node_modules/eslint-loader/index.js):\\nError: Failed to load plugin react: Cannot find module 'eslint-plugin-react'\\n    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:582:15)\\n    at Function.resolve (C:\\\\bash\\\\webpack-play\\\\node_modules\\\\v8-compile-cache\\\\v8-compile-cache.js:166:23)\\n    at Plugins.load (C:\\\\bash\\\\webpack-play\\\\node_modules\\\\eslint\\\\lib\\\\config\\\\plugins.js:104:29)\\n    at Array.forEach (<anonymous>)\\n    at Plugins.loadAll (C:\\\\bash\\\\webpack-play\\\\node_modules\\\\eslint\\\\lib\\\\config\\\\plugins.js:165:21)\\n    at loadFromDisk (C:\\\\bash\\\\webpack-play\\\\node_modules\\\\eslint\\\\lib\\\\config\\\\config-file.js:529:35)\\n    at Object.load (C:\\\\bash\\\\webpack-play\\\\node_modules\\\\eslint\\\\lib\\\\config\\\\config-file.js:587:20)\\n    at Config.getPersonalConfig (C:\\\\bash\\\\webpack-play\\\\node_modules\\\\eslint\\\\lib\\\\config.js:167:37)\\n    at Config.getLocalConfigHierarchy (C:\\\\bash\\\\webpack-play\\\\node_modules\\\\eslint\\\\lib\\\\config.js:261:41)\\n    at Config.getConfigHierarchy (C:\\\\bash\\\\webpack-play\\\\node_modules\\\\eslint\\\\lib\\\\config.js:192:43)\\n    at Config.getConfigVector (C:\\\\bash\\\\webpack-play\\\\node_modules\\\\eslint\\\\lib\\\\config.js:299:21)\\n    at Config.getConfig (C:\\\\bash\\\\webpack-play\\\\node_modules\\\\eslint\\\\lib\\\\config.js:342:29)\\n    at processText (C:\\\\bash\\\\webpack-play\\\\node_modules\\\\eslint\\\\lib\\\\cli-engine.js:181:33)\\n    at CLIEngine.executeOnText (C:\\\\bash\\\\webpack-play\\\\node_modules\\\\eslint\\\\lib\\\\cli-engine.js:690:40)\\n    at lint (C:\\\\bash\\\\webpack-play\\\\node_modules\\\\eslint-loader\\\\index.js:263:17)\\n    at Object.module.exports (C:\\\\bash\\\\webpack-play\\\\node_modules\\\\eslint-loader\\\\index.js:258:21)\");\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("console.log('home js file');\r\n\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 

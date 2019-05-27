@@ -77,23 +77,23 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "http://wflixu.github.io";
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/other.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/index.js":
+/***/ "./src/other.js":
 /*!**********************!*\
-  !*** ./src/index.js ***!
+  !*** ./src/other.js ***!
   \**********************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("throw new Error(\"Module build failed (from ./node_modules/babel-loader/lib/index.js):\\nError: [BABEL] C:\\\\bash\\\\webpack-play\\\\src\\\\index.js: The decorators plugin requires a 'decoratorsBeforeExport' option, whose value must be a boolean. If you want to use the legacy decorators semantics, you can set the 'legacy: true' option. (While processing: \\\"C:\\\\\\\\bash\\\\\\\\webpack-play\\\\\\\\node_modules\\\\\\\\@babel\\\\\\\\plugin-proposal-decorators\\\\\\\\lib\\\\\\\\index.js\\\")\\n    at _default (C:\\\\bash\\\\webpack-play\\\\node_modules\\\\@babel\\\\plugin-proposal-decorators\\\\lib\\\\index.js:58:13)\\n    at C:\\\\bash\\\\webpack-play\\\\node_modules\\\\@babel\\\\helper-plugin-utils\\\\lib\\\\index.js:19:12\\n    at loadDescriptor (C:\\\\bash\\\\webpack-play\\\\node_modules\\\\@babel\\\\core\\\\lib\\\\config\\\\full.js:165:14)\\n    at cachedFunction (C:\\\\bash\\\\webpack-play\\\\node_modules\\\\@babel\\\\core\\\\lib\\\\config\\\\caching.js:33:19)\\n    at loadPluginDescriptor (C:\\\\bash\\\\webpack-play\\\\node_modules\\\\@babel\\\\core\\\\lib\\\\config\\\\full.js:200:28)\\n    at config.plugins.reduce (C:\\\\bash\\\\webpack-play\\\\node_modules\\\\@babel\\\\core\\\\lib\\\\config\\\\full.js:69:20)\\n    at Array.reduce (<anonymous>)\\n    at recurseDescriptors (C:\\\\bash\\\\webpack-play\\\\node_modules\\\\@babel\\\\core\\\\lib\\\\config\\\\full.js:67:38)\\n    at loadFullConfig (C:\\\\bash\\\\webpack-play\\\\node_modules\\\\@babel\\\\core\\\\lib\\\\config\\\\full.js:108:6)\\n    at process.nextTick (C:\\\\bash\\\\webpack-play\\\\node_modules\\\\@babel\\\\core\\\\lib\\\\transform.js:28:33)\\n    at process._tickCallback (internal/process/next_tick.js:61:11)\");\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("console.log('other js')\n\n//# sourceURL=webpack:///./src/other.js?");
 
 /***/ })
 
