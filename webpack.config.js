@@ -8,8 +8,38 @@ const webpack  = require('webpack');
 module.exports = {
     mode: 'development',
     entry: {
-        'home':'./src/index.js',
-         'other':'./src/other.js'
+        'main':'./src/index.js',
+    },
+    module:{
+        rules:[
+            {
+                test: /\.js$/,
+                use: [
+                    {
+                        loader: 'babel-loader',
+                        options: {
+                            "presets": [
+                                '@babel/preset-env'
+                            ],
+                            "plugins": [
+                                [
+                                    "@babel/plugin-transform-runtime",
+                                    {
+                                        "absoluteRuntime": false,
+                                        "corejs": false,
+                                        "helpers": true,
+                                        "regenerator": true,
+                                        "useESModules": false
+                                    }
+                                ]
+                            ]
+                        },
+                    },
+                ],
+                include: path.resolve(__dirname, 'src'),
+                exclude: /node_modules/
+            },
+        ]
     },
     output: {
         filename: '[name].bundle.[hash:8].js',
@@ -25,14 +55,9 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             title: 'My App',
-            filename: 'home.html',
-            chunks:['home']
+            template:'./public/index.html'
           }),
-        new HtmlWebpackPlugin({
-            title: 'My App',
-            filename: 'other.html',
-            chunks:['other']
-          })
+       
     ],
  
 }
