@@ -3,43 +3,32 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 
-const webpack  = require('webpack');
+const webpack = require('webpack');
 
 module.exports = {
     mode: 'development',
-    entry: {
-        'main':'./src/index.js',
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                common: {
+                    minSize: 0,
+                    chunks: 'initial',
+                    minChunks: 2,
+                },
+                vendor: {
+                    priority: 1,
+                    test: /node_modules/,
+                    minSize: 0,
+                    chunks: 'initial',
+                    minChunks: 2,
+                },
+
+            }
+        }
     },
-    module:{
-        rules:[
-            {
-                test: /\.js$/,
-                use: [
-                    {
-                        loader: 'babel-loader',
-                        options: {
-                            "presets": [
-                                '@babel/preset-env'
-                            ],
-                            "plugins": [
-                                [
-                                    "@babel/plugin-transform-runtime",
-                                    {
-                                        "absoluteRuntime": false,
-                                        "corejs": false,
-                                        "helpers": true,
-                                        "regenerator": true,
-                                        "useESModules": false
-                                    }
-                                ]
-                            ]
-                        },
-                    },
-                ],
-                include: path.resolve(__dirname, 'src'),
-                exclude: /node_modules/
-            },
-        ]
+    entry: {
+        'main': './src/index.js',
+        'other': './src/other.js',
     },
     output: {
         filename: '[name].bundle.[hash:8].js',
@@ -50,14 +39,14 @@ module.exports = {
         progress: true,
         contentBase: './dist'
     },
-          
+
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             title: 'My App',
-            template:'./public/index.html'
-          }),
-       
+            template: './public/index.html'
+        }),
+
     ],
- 
+
 }
