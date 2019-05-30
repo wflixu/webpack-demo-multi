@@ -1,9 +1,13 @@
-import './b';
-import './a';
+console.log('main js');
 
-console.log('index~~~~');
+ if (module.hot) {
+   module.hot.accept('./source.js', function(data) {
 
-import $ from 'jquery';
+   
 
-console.log($);
+     console.log('~~~~~~~');
+     console.log(str);
+     
+   })
+ }
 

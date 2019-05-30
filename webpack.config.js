@@ -28,7 +28,6 @@ module.exports = {
     },
     entry: {
         'main': './src/index.js',
-        'other': './src/other.js',
     },
     output: {
         filename: '[name].bundle.[hash:8].js',
@@ -37,6 +36,8 @@ module.exports = {
     devServer: {
         port: 8082,
         progress: true,
+        open:true,
+        hot: true,
         contentBase: './dist'
     },
 
@@ -46,6 +47,8 @@ module.exports = {
             title: 'My App',
             template: './public/index.html'
         }),
+        new webpack.NamedModulesPlugin(),
+        new webpack.HotModuleReplacementPlugin()
 
     ],
 
