@@ -1,13 +1,7 @@
-console.log('main js');
 
- if (module.hot) {
-   module.hot.accept('./source.js', function(data) {
 
-   
+let str = require('./a.js')
 
-     console.log('~~~~~~~');
-     console.log(str);
-     
-   })
- }
+require('./index.less');
 
+console.log(str);
