@@ -1,7 +1,19 @@
 
 
-let str = require('./a.js')
+// let str = require('inline-loader!./a.js')
+let str = require('./a.js');
 
-require('./index.less');
+class Animal {
+    constructor(){
+        this.name = 'dog'
+    }
+    eat(){
+        console.log('dog eating food');
+        
+    }
+}
 
-console.log(str);
+const dog = new Animal();
+dog.eat();
+
+console.log('test wathc');
