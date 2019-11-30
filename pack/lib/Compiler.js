@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-let ejs = require('ejs');
 let Handlebars = require('handlebars');
 
 // babylon

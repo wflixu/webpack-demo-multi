@@ -6,6 +6,7 @@ yarn-error.log*
 dist/
 *.exe
 *.cpp
+package-lock.json
 
 # Editor directories and files
 .idea
