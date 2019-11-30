@@ -1,0 +1,23 @@
+{
+  "name": "lx-pack",
+  "version": "1.0.0",
+  "bin": {
+    "lx-pack": "./bin/lx-pack.js"
+  },
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/generator": "^7.7.4",
+    "@babel/traverse": "^7.7.4",
+    "@babel/types": "^7.7.4",
+    "babylon": "^6.18.0",
+    "ejs": "^3.0.1",
+    "handlebars": "^4.5.3"
+  }
+}

@@ -1,1 +1,0 @@
-'banner sdfgdf   sfdg fffff' 
